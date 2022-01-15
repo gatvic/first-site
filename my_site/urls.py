@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 from blog.views import index
-from plant_calc.views import index_2
+from plant_calc.views import calc
 
 urlpatterns = [
     path('', include('blog.urls')),
