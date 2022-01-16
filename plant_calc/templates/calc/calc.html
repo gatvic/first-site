@@ -6,10 +6,17 @@
 </head>
 <body>
 <div>
+    <a href="/">На главную</a>
+</div>
+<div>
     <h2> Выбор растения </h2>
-    <select>
-        {{ plants.plant }}
-    </select>
+
+    <h3>Добавить растение</h3>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Сохранить">
+    </form>
 </div>
 <div>
     <h2>Выбор удобрения 1</h2>
@@ -26,6 +33,11 @@
 <div>
     <h2>Выбор удобрения 5</h2>
 </div>
-<div>Результат</div>
+<div>
+    <h2>добавить удобрение</h2>
+</div>
+<div>
+    <h3>Результат</h3>
+</div>
 </body>
 </html>
