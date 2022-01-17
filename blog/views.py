@@ -1,10 +1,12 @@
 from django.shortcuts import render
+from django.utils import timezone
 # from django.http import HttpResponse, Http404
-# Create your views here.
+from .models import Post
 
 
 def post_list(request):
-    return render(request, 'blog/base.html', {})
+    posts = Post.objects.all()
+    return render(request, 'blog/base.html', {'posts': posts})
 
 
 # def categories(request, catid):
