@@ -16,11 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from blog.views import index
-from plant_calc.views import calc
+from blog.views import *
+from plant_calc.views import *
 
 urlpatterns = [
     path('', include('blog.urls')),
     path('plant_calc/', include('plant_calc.urls')),
     path('admin/', admin.site.urls),
+    path('cats/<slug:cat>/', categories),
 ]

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .form import PlantForm
+from .form import AddPlantForm
 # , SubForm
 # from django.http import HttpResponse
 # Create your views here.
@@ -9,8 +9,8 @@ def calc(request):
     return render(request, 'calc/calc.html', {})
 
 
-def index(request):
-    plantform = PlantForm()
+def add_plant(request):
+    plantform = AddPlantForm()
     return render(request, 'calc.html', {'form': plantform})
 
 

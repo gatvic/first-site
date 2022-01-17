@@ -1,18 +1,9 @@
 from django import forms
+# from django.forms.widgets import Select
+# from .models import *
 
-from .models import Plants #, Substances
 
+class AddPlantForm(forms.Form):
 
-class PlantForm(forms.ModelForm):
-
-    class Meta:
-        model = Plants
-        fields = ['plant', 'n', 'p', 'k', 'ca', 'mg']
-'''class SubForm(forms.Form):
-
-    sub = forms.CharField()
+    plant = forms.CharField(label='Растение')
     n = forms.IntegerField()
-    p = forms.IntegerField()
-    k = forms.IntegerField()
-    ca = forms.IntegerField()
-    mg = forms.IntegerField()'''
