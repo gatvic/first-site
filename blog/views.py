@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.utils import timezone
+# from django.utils import timezone
 # from django.http import HttpResponse, Http404
 from .models import Post
 
