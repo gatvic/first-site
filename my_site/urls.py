@@ -23,5 +23,5 @@ urlpatterns = [
     path('', include('blog.urls')),
     path('plant_calc/', include('plant_calc.urls')),
     path('admin/', admin.site.urls),
-    path('cats/<slug:cat>/', categories),
+#    path('cats/<slug:cat>/', categories),
 ]
