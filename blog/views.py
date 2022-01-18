@@ -22,5 +22,5 @@ def by_cat(request, cat_id):
     posts = Post.objects.filter(cat=cat_id)
     cats = Cat.objects.all()
     current_cat = Cat.objects.get(pk=cat_id)
-    context = {'posts': posts, 'cats': cats, 'current_cats': current_cat}
-    return render(request, 'blog/by_cat.html', context)
+    context = {'posts': posts, 'cats': cats, 'current_cat': current_cat}
+    return render(request, 'blog/by_cats.html', context)
