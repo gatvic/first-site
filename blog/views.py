@@ -11,11 +11,3 @@ def post_list(request):
 def post_detail(request, pk):
     post = get_list_or_404(Post, pk=pk)
     return render(request, 'blog/post_detail.html', {'post': post})
-# def categories(request, catid):
-#    if request.GET:
-#        print(request.GET)
-#    return HttpResponse(f'<h1>Статьи по категориям</h1><p>{cat}</p>')
-
-
-# def pageNotFound(request, exeption):
-#    return HttpResponse
