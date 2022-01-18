@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ current_cat.name }} :: Доска заметок</title>
+</head>
+<body>
+  <h1> Заметки </h1>
+  <h2>Категория: {{ current_cat.name }}</h2>
+  <div>
+    <a href="/">Главная</a>
+    {% for cat in cats %}
+    <a href="/blog/{{ cat.pk }}/">{{ cat.name }}</a>
+    {% endfor %}
+  </div>
+  <div>
+    <h2> {{ post.title }} </h2>
+
+    <p>{{ post.text }}</p>
+    <p>{{ post.published_date }}</p>
+  </div>
+</body>
+</html>
