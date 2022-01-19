@@ -20,6 +20,7 @@
             <p><a href="/blog/{{ post.cat.pk }}">{{ post.cat.name }}</a> </p>
         </div>
         {% endfor %}
+    <a href="{% url 'add' %}">Добавить заметку</a>
     <div>
         <p>Сайт заработал</p>
         <p><a href="{% url 'calc' %}">калькулятор</a> </p>

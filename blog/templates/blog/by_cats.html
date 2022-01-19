@@ -11,7 +11,7 @@
   <div>
     <a href="/">Главная</a>
     {% for cat in cats %}
-    <a href="/blog/{{ cat.name }}/">{{ cat.name }}</a>
+    <a href="/blog/{{ cat.pk }}/">{{ cat.name }}</a>
     {% endfor %}
   </div>
   {% for post in posts %}
@@ -21,5 +21,6 @@
     <p>{{ post.published_date }}</p>
     </div>
   {% endfor %}
+  <a href="{% url 'add' %}">Добавить заметку</a>
 </body>
 </html>
