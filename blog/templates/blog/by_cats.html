@@ -5,13 +5,13 @@
     <title>{{ current_cat.name }} :: Доска заметок</title>
 </head>
 <body>
-  <h1> Заметки </h1>
+  <h1><a href="{% url 'post_list' %}">Заметки</a>  </h1>
 
   <h2>Категория: {{ current_cat.name }}</h2>
   <div>
     <a href="/">Главная</a>
     {% for cat in cats %}
-    <a href="/blog/{{ cat.pk }}/">{{ cat.name }}</a>
+    <a href="{% url 'by_cat' cat.pk %}">{{ cat.name }}</a>
     {% endfor %}
   </div>
   {% for post in posts %}
