@@ -1,8 +1,8 @@
 from django.db import models
 
 
-class Plants(models.Model):
-    plant = models.CharField(max_length=200, verbose_name='Растение')
+class Plant(models.Model):
+    name = models.CharField(max_length=200, verbose_name='Растение')
     n = models.IntegerField()
     p = models.IntegerField()
     k = models.IntegerField()
@@ -10,11 +10,16 @@ class Plants(models.Model):
     mg = models.IntegerField()
 
     def __str__(self):
-        return self.plant
+        return self.name
+
+    class Meta:
+
+        verbose_name = 'Растение'
+        verbose_name_plural = 'Растения'
 
 
-class Substances(models.Model):
-    sub = models.CharField(max_length=200, verbose_name='Удобрение')
+class Substance(models.Model):
+    title = models.CharField(max_length=200, verbose_name='Удобрение')
     n = models.IntegerField()
     p = models.IntegerField()
     k = models.IntegerField()
@@ -22,4 +27,8 @@ class Substances(models.Model):
     mg = models.IntegerField()
 
     def __str__(self):
-        return self.sub
+        return self.title
+
+    class Meta:
+        verbose_name = 'Вещество'
+        verbose_name_plural = 'Вещества'
