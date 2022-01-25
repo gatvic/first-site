@@ -34,7 +34,7 @@ def by_cat(request, cat_id):
 class PostCreateView(CreateView):
     template_name = 'blog/create.html'
     form_class = PostForm
-    success_url = reverse_lazy('base')
+    success_url = reverse_lazy('post_list')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
